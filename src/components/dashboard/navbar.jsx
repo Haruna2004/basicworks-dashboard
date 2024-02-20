@@ -1,6 +1,7 @@
 import { Bell, PlusIcon, Search } from "lucide-react";
 import { Input } from "../ui/input";
 import React from "react";
+import { Switch } from "@tremor/react";
 
 const Navbar = () => {
   return (
@@ -19,10 +20,12 @@ const Navbar = () => {
 
         <Bell size={17} className="cursor-pointer text-black/70 " />
 
-        <div className=" rounded-2xl p-2 flex items-center justify-center gap-1 bg-black text-white text-xs font-semibold cursor-pointer">
+        <Switch className="" aria-setsize={32} />
+
+        {/* <div className=" rounded-2xl p-2 flex items-center justify-center gap-1 bg-black text-white text-xs font-semibold cursor-pointer">
           <PlusIcon size={15} />
           <p>Add Device</p>
-        </div>
+        </div> */}
       </div>
     </div>
   );
