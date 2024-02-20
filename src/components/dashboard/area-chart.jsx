@@ -3,68 +3,68 @@ import { AreaChart } from "@tremor/react";
 const chartdata = [
   {
     date: "Jan 22",
-    SemiAnalysis: 2890,
-    "The Pragmatic Engineer": 2338,
+    "Load History": 2890,
+    "Energy Efficency": 2338,
   },
   {
     date: "Feb 22",
-    SemiAnalysis: 2756,
-    "The Pragmatic Engineer": 2103,
+    "Load History": 2756,
+    "Energy Efficency": 2103,
   },
   {
     date: "Mar 22",
-    SemiAnalysis: 3322,
-    "The Pragmatic Engineer": 2194,
+    "Load History": 3322,
+    "Energy Efficency": 2194,
   },
   {
     date: "Apr 22",
-    SemiAnalysis: 3470,
-    "The Pragmatic Engineer": 2108,
+    "Load History": 3470,
+    "Energy Efficency": 2108,
   },
   {
     date: "May 22",
-    SemiAnalysis: 3475,
-    "The Pragmatic Engineer": 1812,
+    "Load History": 3475,
+    "Energy Efficency": 1812,
   },
   {
     date: "Jun 22",
-    SemiAnalysis: 3129,
-    "The Pragmatic Engineer": 1726,
+    "Load History": 3129,
+    "Energy Efficency": 1726,
   },
   {
     date: "Jul 22",
-    SemiAnalysis: 3490,
-    "The Pragmatic Engineer": 1982,
+    "Load History": 3490,
+    "Energy Efficency": 1982,
   },
   {
     date: "Aug 22",
-    SemiAnalysis: 2903,
-    "The Pragmatic Engineer": 2012,
+    "Load History": 2903,
+    "Energy Efficency": 2012,
   },
   {
     date: "Sep 22",
-    SemiAnalysis: 2643,
-    "The Pragmatic Engineer": 2342,
+    "Load History": 2643,
+    "Energy Efficency": 2342,
   },
   {
     date: "Oct 22",
-    SemiAnalysis: 2837,
-    "The Pragmatic Engineer": 2473,
+    "Load History": 2837,
+    "Energy Efficency": 2473,
   },
   {
     date: "Nov 22",
-    SemiAnalysis: 2954,
-    "The Pragmatic Engineer": 3848,
+    "Load History": 2954,
+    "Energy Efficency": 3848,
   },
   {
     date: "Dec 22",
-    SemiAnalysis: 3239,
-    "The Pragmatic Engineer": 3736,
+    "Load History": 3239,
+    "Energy Efficency": 3736,
   },
 ];
 
 const valueFormatter = function (number) {
-  return "$ " + new Intl.NumberFormat("us").format(number).toString();
+  return "" + new Intl.NumberFormat("us").format(number).toString() + " KW/H";
 };
 
 const Chart = () => {
@@ -78,12 +78,12 @@ const Chart = () => {
       </p> */}
 
       <AreaChart
-        className="mt-4 h-72"
+        className="mt-4 h-72 ml-3"
         data={chartdata}
         index="date"
         yAxisWidth={65}
-        categories={["SemiAnalysis", "The Pragmatic Engineer"]}
-        colors={["indigo", "cyan"]}
+        categories={["Load History", "Energy Efficency"]}
+        colors={["blue", "purple"]}
         valueFormatter={valueFormatter}
       />
     </>
