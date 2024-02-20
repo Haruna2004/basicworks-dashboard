@@ -15,8 +15,8 @@ export const Efficiency = () => {
       </div>
 
       <Flex className="space-x-5" justifyContent="center">
-        <ProgressCircle value={65} size="xl" strokeWidth={6} color="violet">
-          <span className="text-xs font-medium text-slate-700">75%</span>
+        <ProgressCircle value={75} size="xl" strokeWidth={8} color="violet">
+          <span className="text-base font-bold text-slate-700">75%</span>
         </ProgressCircle>
       </Flex>
 
@@ -41,8 +41,8 @@ export const UsageLoad = () => {
       </div>
 
       <Flex className="space-x-5" justifyContent="center">
-        <ProgressCircle value={65} size="xl" strokeWidth={6} color="violet">
-          <span className="text-xs font-medium text-slate-700">376 kw/h</span>
+        <ProgressCircle value={65} size="xl" strokeWidth={8} color="violet">
+          <span className="text-sm font-bold text-slate-700">376 kw/h</span>
         </ProgressCircle>
       </Flex>
 
