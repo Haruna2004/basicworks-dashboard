@@ -1,6 +1,8 @@
 import { LucideLightbulb, Search } from "lucide-react";
 import React from "react";
-import { Switch } from "@tremor/react";
+// import { Switch } from "@tremor/react";
+import { Label } from "../ui/label";
+import { Switch } from "../ui/switch";
 
 const Navbar = () => {
   return (
@@ -17,13 +19,19 @@ const Navbar = () => {
           />
         </div>
 
-        <Switch className="" />
+        {/* <Switch className="" />
         <LucideLightbulb
           color="orange"
           fill="orange"
           size={25}
           className="cursor-pointer "
-        />
+        /> */}
+        <div className="flex items-center space-x-2">
+          <Switch id="light-switch" className="scale-125" />
+          {/* <Label htmlFor="light-switch " className="text-base">
+            Main Power
+          </Label> */}
+        </div>
       </div>
     </div>
   );
