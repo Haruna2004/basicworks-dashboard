@@ -14,13 +14,13 @@ const Visuals = () => {
       </div>
 
       {/* buttom cards */}
-      <div className="flex gap-3 items-center justify-between w-full p-3">
+      <div className="flex flex-col sm:flex-row gap-3 items-center justify-between w-full p-3">
         {/* Card2 */}
-        <div className="flex-[0.5] h-auto border rounded-md p-3 space-y-5">
+        <div className="sm:flex-[0.5] w-full h-auto border rounded-md p-3 space-y-5">
           <UsageLoad />
         </div>
         {/* Card3 */}
-        <div className="flex-[0.5] h-auto border rounded-md p-3 space-y-5">
+        <div className="sm:flex-[0.5] w-full h-auto border rounded-md p-3 space-y-5">
           <Efficiency />
         </div>
       </div>

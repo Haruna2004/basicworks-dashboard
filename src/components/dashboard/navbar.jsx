@@ -8,7 +8,7 @@ const Navbar = () => {
       <p className="text-xl font-semibold">Overview</p>
       <div className="flex gap-3 items-center">
         {/* search */}
-        <div className="flex items-center bg-white/80 p-1.5 rounded-xl gap-2 border">
+        <div className="sm:flex items-center bg-white/80 p-1.5 rounded-xl gap-2 border hidden">
           <Search className="text-muted-foreground" size={15} />
           <input
             type="text"
