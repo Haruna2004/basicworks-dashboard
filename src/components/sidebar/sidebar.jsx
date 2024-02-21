@@ -16,7 +16,7 @@ const Sidebar = () => {
     { title: "Setting", svg: <IoSettingsOutline /> },
   ];
   return (
-    <div className="flex-[0.2] w-full h-full bg-[rgba(33,33,33,255)]">
+    <div className="flex-[0.2] w-full h-full bg-[rgba(33,33,33,255)] ">
       {/* Logo */}
 
       {/* middle-section */}
