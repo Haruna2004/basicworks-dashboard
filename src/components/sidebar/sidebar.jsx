@@ -1,25 +1,54 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { LuHome } from "react-icons/lu";
+import { FaMoneyBillTrendUp } from "react-icons/fa6";
+import { LuActivity } from "react-icons/lu";
+import { HiOutlineDeviceTablet } from "react-icons/hi";
+import { BsCurrencyDollar } from "react-icons/bs";
+import { IoSettingsOutline } from "react-icons/io5";
 
 const Sidebar = () => {
   const sidebar_items = [
-    { title: "Dashboard" },
-    { title: "Cost" },
-    { title: "Usage" },
-    { title: "Devices" },
-    { title: "Billing" },
-    { title: "Setting" },
+    { title: "Dashboard", svg: <LuHome /> },
+    { title: "Cost", svg: <FaMoneyBillTrendUp /> },
+    { title: "Usage", svg: <LuActivity /> },
+    { title: "Devices", svg: <HiOutlineDeviceTablet /> },
+    { title: "Billing", svg: <BsCurrencyDollar /> },
+    { title: "Setting", svg: <IoSettingsOutline /> },
   ];
   return (
-    <div className="flex-[0.3] w-full h-full bg-black/70 hidden md:flex lg:flex-[0.2]">
+    <div className="lg:flex-[0.2] md:flex-[0.3] md:flex hidden w-full h-full relative bg-[rgba(33,33,33,255)] ">
       {/* Logo */}
-      <div className="bg-black/70 flex flex-col w-full p-2">
-        <h1 className="text-xl text-white/90 font-semibold font-mono text-amber-600 ">
-          BASICWORKS
-        </h1>
-        <p className="text-white/70 -mt-1 text-sm">Energy Dashboard</p>
-      </div>
+
       {/* middle-section */}
-      <div className="h-full">{/* <Avatar /> */}</div>
+      <div className="h-full ml-10 my-10 fixed">
+        <div className="flex gap-x-2.5">
+          <Avatar>
+            <AvatarImage src="https://github.com/shadcn.png" />
+            <AvatarFallback>JD</AvatarFallback>
+          </Avatar>
+          <div className="fw-600">
+            <h3 className="text-white text-xl">JOHN DOE</h3>
+            <p className="text-[rgba(139,139,139,255)] text-base">
+              My House #!
+            </p>
+          </div>
+        </div>
+        <div className="my-14 flex flex-col gap-y-10">
+          {sidebar_items.map((item, index) => (
+            <div
+              className={`flex items-center gap-x-3 ${
+                item.title == "Dashboard"
+                  ? "text-white"
+                  : "text-[rgba(102,102,102,255)]"
+              }  `}
+              key={index}
+            >
+              {item.svg}
+              <h4 className="">{item.title}</h4>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };

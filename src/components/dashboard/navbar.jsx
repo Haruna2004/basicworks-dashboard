@@ -6,16 +6,16 @@ import { Switch } from "../ui/switch";
 
 const Navbar = () => {
   return (
-    <div className="w-full flex justify-between items-center  p-4">
-      <p className="text-xl font-semibold">Overview</p>
+    <div className="w-full flex justify-between items-center shadow-lg p-4">
+      <p className="text-xl font-semibold">Basic Works</p>
       <div className="flex gap-3 items-center">
         {/* search */}
-        <div className="sm:flex items-center bg-white/80 p-1.5 rounded-xl gap-2 border hidden">
+        <div className="sm:flex items-center bg-white/80 p-1.5 rounded-xl gap-2 border border-black hidden">
           <Search className="text-muted-foreground" size={15} />
           <input
             type="text"
             placeholder="search..."
-            className=" text-sm bg-transparent outline-none "
+            className=" text-sm bg-transparent outline-none"
           />
         </div>
 
