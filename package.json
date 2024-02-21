@@ -12,13 +12,10 @@
     "@headlessui/react": "^1.7.18",
     "@headlessui/tailwindcss": "^0.2.0",
     "@radix-ui/react-avatar": "^1.0.4",
-<<<<<<< HEAD
     "@radix-ui/react-icons": "^1.3.0",
-=======
     "@radix-ui/react-label": "^2.0.2",
     "@radix-ui/react-switch": "^1.0.3",
     "@tremor/react": "^3.14.0",
->>>>>>> 9c0edf41ffde0608768a30e84f0cdf4c915aae2d
     "axios": "^1.6.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",

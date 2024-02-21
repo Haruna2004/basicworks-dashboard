@@ -16,11 +16,11 @@ const Sidebar = () => {
     { title: "Setting", svg: <IoSettingsOutline /> },
   ];
   return (
-    <div className="flex-[0.2] w-full h-full bg-[rgba(33,33,33,255)] ">
+    <div className="lg:flex-[0.2] md:flex-[0.3] md:flex hidden w-full h-full relative bg-[rgba(33,33,33,255)] ">
       {/* Logo */}
 
       {/* middle-section */}
-      <div className="h-full ml-10 my-10">
+      <div className="h-full ml-10 my-10 fixed">
         <div className="flex gap-x-2.5">
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" />
