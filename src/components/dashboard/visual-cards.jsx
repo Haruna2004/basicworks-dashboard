@@ -1,7 +1,8 @@
 import { Flex, ProgressCircle } from "@tremor/react";
 import { Settings } from "lucide-react";
 
-export const Voltage = () => {
+export const Voltage = ({volt}) => {
+
   return (
     <>
       <div className="flex justify-between text-xs font-medium items-center">
@@ -16,12 +17,12 @@ export const Voltage = () => {
 
       <Flex className="space-x-5" justifyContent="center">
         <ProgressCircle
-          value={0.37 * 190}
+          value={0.37 * volt}
           size="xl"
           strokeWidth={8}
           color="violet"
         >
-          <span className="text-base font-bold text-slate-700">190V</span>
+          <span className="text-base font-bold text-slate-700">{volt}V</span>
         </ProgressCircle>
       </Flex>
 
@@ -30,7 +31,7 @@ export const Voltage = () => {
   );
 };
 
-export const Current = () => {
+export const Current = ({current}) => {
   return (
     <>
       <div className="flex justify-between text-xs font-medium items-center">
@@ -39,18 +40,18 @@ export const Current = () => {
       </div>
 
       <div className="flex items-center justify-center gap-3 w-full text-xs mt-2 opacity-50">
-        <p className="">Highest 1000A </p>
+        <p className="">Highest 10A </p>
         <p>Lowest 0A</p>
       </div>
 
       <Flex className="space-x-5" justifyContent="center">
         <ProgressCircle
-          value={0.1 * 400}
+          value={1000 * current}
           size="xl"
           strokeWidth={8}
           color="violet"
         >
-          <span className="text-sm font-bold text-slate-700">400A</span>
+          <span className="text-sm font-bold text-slate-700">{current}A</span>
         </ProgressCircle>
       </Flex>
 
@@ -59,27 +60,27 @@ export const Current = () => {
   );
 };
 
-export const PowerFactor = () => {
+export const Energy = ({energy}) => {
   return (
     <>
       <div className="flex justify-between text-xs font-medium items-center">
-        <p>Power factor</p>
+        <p>Energy</p>
         <Settings size={12} />
       </div>
 
       <div className="flex items-center justify-center gap-3 w-full text-xs mt-2 opacity-50">
-        <p className="">Highest 1 </p>
+        <p className="">Highest 10kwh </p>
         <p>Lowest 0</p>
       </div>
 
       <Flex className="space-x-5" justifyContent="center">
         <ProgressCircle
-          value={0.4 * 100}
+          value={energy * 1000}
           size="xl"
           strokeWidth={8}
           color="violet"
         >
-          <span className="text-sm font-bold text-slate-700">0.4</span>
+          <span className="text-sm font-bold text-slate-700">{energy}Kwh</span>
         </ProgressCircle>
       </Flex>
 
