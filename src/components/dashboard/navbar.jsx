@@ -1,10 +1,22 @@
+"use client"
+
 import { LucideLightbulb, Search } from "lucide-react";
-import React from "react";
+import { IoIosMenu } from "react-icons/io";
+import React, { useState } from "react";
 // import { Switch } from "@tremor/react";
 import { Label } from "../ui/label";
 import { Switch } from "../ui/switch";
 
 const Navbar = () => {
+  const [relayOn,setRelayOn] = useState(true)
+  const switchLight = async () => {
+      const res  = await fetch('http://192.168.43.152/toggle-relay')
+      // const data = await req.text()
+      setRelayOn(!relayOn)
+      //console.log(data)
+
+  }
+
   return (
     <div className="w-full flex justify-between items-center shadow-lg p-4">
       <p className="text-xl font-semibold">Basic Works</p>
@@ -27,7 +39,8 @@ const Navbar = () => {
           className="cursor-pointer "
         /> */}
         <div className="flex items-center space-x-2">
-          <Switch id="light-switch" className="scale-125" />
+          <Switch id="light-switch"  className="scale-125" onClick={() =>  switchLight() } checked={relayOn}/>
+          <IoIosMenu className="text-3xl md:hidden" />
           {/* <Label htmlFor="light-switch " className="text-base">
             Main Power
           </Label> */}
