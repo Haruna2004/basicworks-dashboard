@@ -28,15 +28,13 @@ const Sidebar = () => {
           </Avatar>
           <div className="fw-600">
             <h3 className="text-white text-xl">JOHN DOE</h3>
-            <p className="text-[rgba(139,139,139,255)] text-base">
-              My House
-            </p>
+            <p className="text-[rgba(139,139,139,255)] text-base">My House</p>
           </div>
         </div>
         <div className="my-14 flex flex-col gap-y-10">
           {sidebar_items.map((item, index) => (
             <div
-              className={`flex items-center gap-x-3 ${
+              className={`flex items-center gap-x-3 cursor-pointer ${
                 item.title == "Dashboard"
                   ? "text-white"
                   : "text-[rgba(102,102,102,255)]"
