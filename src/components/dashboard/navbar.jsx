@@ -6,14 +6,16 @@ import { Switch } from "../ui/switch";
 
 const Navbar = () => {
   const [relayOn, setRelayOn] = useState(true);
-  const SERVER_IP = "http://192.168.43.152";
+  // const SERVER_IP = "http://192.168.43.152";
+  // for esp32
+  const SERVER_IP = "";
 
   const switchLight = async () => {
     try {
       const res = await fetch(`${SERVER_IP}/toggle-relay`);
       setRelayOn(!relayOn);
     } catch (error) {
-      // console.log("error: ", error);s
+      // console.log("error: ", error);
       return;
     }
   };

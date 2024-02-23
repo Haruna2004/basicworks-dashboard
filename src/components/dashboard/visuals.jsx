@@ -5,7 +5,10 @@ import { Current, Energy, Voltage } from "@/components/dashboard/visual-cards";
 import { useEffect, useState } from "react";
 
 const Visuals = () => {
-  const SERVER_IP = "http://192.168.43.152";
+  // const SERVER_IP = "http://192.168.43.152";
+  // for esp32
+  const SERVER_IP = "";
+
   const [voltage, setVoltage] = useState(0);
   const [current, setCurrent] = useState(0);
   const [energy, setEnergy] = useState(0);
