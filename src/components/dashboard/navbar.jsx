@@ -1,7 +1,6 @@
 "use client";
 
 import { Search } from "lucide-react";
-import { IoIosMenu } from "react-icons/io";
 import React, { useState } from "react";
 import { Switch } from "../ui/switch";
 
@@ -11,20 +10,17 @@ const Navbar = () => {
 
   const switchLight = async () => {
     try {
-      console.log("data");
       const res = await fetch(`${SERVER_IP}/toggle-relay`);
-      // const data = await req.text()
       setRelayOn(!relayOn);
-      console.log("data");
     } catch (error) {
-      console.log("error: ", error);
+      // console.log("error: ", error);s
       return;
     }
   };
 
   return (
     <div className="w-full flex justify-between items-center shadow-lg p-4">
-      <p className="text-xl font-semibold">Basic Works</p>
+      <p className="text-xl font-semibold ">BASIC WORKS</p>
       <div className="flex gap-3 items-center">
         {/* search */}
         <div className="sm:flex items-center bg-white/80 p-1.5 rounded-xl gap-2 border border-black hidden">
@@ -36,13 +32,6 @@ const Navbar = () => {
           />
         </div>
 
-        {/* <Switch className="" />
-        <LucideLightbulb
-          color="orange"
-          fill="orange"
-          size={25}
-          className="cursor-pointer "
-        /> */}
         <div className="flex items-center space-x-2">
           <Switch
             id="light-switch"
@@ -50,10 +39,6 @@ const Navbar = () => {
             onClick={() => switchLight()}
             checked={relayOn}
           />
-          <IoIosMenu className="text-3xl md:hidden" />
-          {/* <Label htmlFor="light-switch " className="text-base">
-            Main Power
-          </Label> */}
         </div>
       </div>
     </div>

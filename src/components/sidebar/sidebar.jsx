@@ -27,7 +27,7 @@ const Sidebar = () => {
             <AvatarFallback>JD</AvatarFallback>
           </Avatar>
           <div className="fw-600">
-            <h3 className="text-white text-xl">JOHN DOE</h3>
+            <h3 className="text-white text-xl">JOHN DOTUN</h3>
             <p className="text-[rgba(139,139,139,255)] text-base">My House</p>
           </div>
         </div>
